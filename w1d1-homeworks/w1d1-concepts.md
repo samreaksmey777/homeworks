@@ -31,3 +31,5 @@ Label each system as **Rule-based AI**, **Classical ML**, or **Deep Learning**. 
 | 3 | GPT-4 generating text responses | Deep Learning | Nueral Network |
 | 4 | Netflix's collaborative filtering recommendation engine | Classic ML | Learnt from user data |
 | 5 | A thermostat that adjusts temperature based on time-of-day rules | Rule-based | Fixed rule |
+| 6 | A CNN that detects tumors in medical images | Deep Learning | ? |
+| 7 | A decision tree that approves/rejects credit card applications based on features | Classic ML | ? |
