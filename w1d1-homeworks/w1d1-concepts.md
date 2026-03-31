@@ -25,4 +25,5 @@
 ### Answer exercise C : AI vs ML vs Deep Learning Sorting
 | # | System | Type | Reason|
 |---|--------|------|-------|
-| 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-base AI | Use humance define rule |
+| 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-based AI | Use humance define rule |
+| 2 | A spam filter trained on 10 million labeled emails using random forest | Classic ML | Trained on data |
