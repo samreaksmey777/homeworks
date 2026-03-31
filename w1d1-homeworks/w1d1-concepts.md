@@ -1,11 +1,11 @@
 ## Answer exercise A : Classify Real-World ML Problems
 | Scenario | Problem Type | Input Features | Output |
 |----------|--------------|----------------|--------|
-| Preditct whether a loan application will detault | Classification | Credit score, income, debt-to-income ratio, Employment hstory | Binary label(default / no detault) |
-| Forecast next month's energy consumption for a city | Regressio | Historical energy usage, weather data, population/activity trens | Numeric value (predicted energy consumption) |
+| Preditct whether a loan application will detault | Classification | Credit Scoring, Income, Employment Status | Default / Not Detault) |
+| Forecast next month's energy consumption for a city | Regressio | Historical energy usage, weather data, population/activity trens | Numeric value|
 | Group customers by purchasing behavior | Clustering | Purchase history,frequency of purchases,average spend | Customer segments/groups|
-| Detect fraudulent credit card transactions | Classification | Transaction amount,location,time, past behavior patterns | Binary label (fraud/not fraud) |
-| Generate product descriptions from an image | Generative | Image pixels/features, detected objects, visual attributes | Text desctiption of the product |
+| Detect fraudulent credit card transactions | Classification | Transaction amount,location,time | Fraud/Not Fraud) |
+| Generate product descriptions from an image | Generative | Image (pixels/features) | Text desctiption of the product |
 | Predict the severity (1-5) of a patient's condition | Classification (ordinal) | Symptoms, vital signs, lab results | Severity category(1-5) |
 
 ------
