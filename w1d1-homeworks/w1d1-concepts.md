@@ -23,3 +23,4 @@
 
 
 ### Answer exercise C : AI vs ML vs Deep Learning Sorting
+| System | Type | Reason|
