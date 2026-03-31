@@ -23,5 +23,6 @@
 
 
 ### Answer exercise C : AI vs ML vs Deep Learning Sorting
-| System | Type | Reason|
-|--------|------|-------|
+| # | System | Type | Reason|
+|---|--------|------|-------|
+| 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-base AI | Use humance define rule |
