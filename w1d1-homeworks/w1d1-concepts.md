@@ -27,3 +27,6 @@
 |---|--------|------|-------|
 | 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-based AI | Use humance define rule |
 | 2 | A spam filter trained on 10 million labeled emails using random forest | Classic ML | Trained on data |
+| 3 | GPT-4 generating text responses | Deep Learning | Nueral Network |
+| 4 | Netflix's collaborative filtering recommendation engine | Classic ML | Learnt from user data |
+| 5 | A thermostat that adjusts temperature based on time-of-day rules | Rule-based | Fixed rule |
