@@ -28,8 +28,8 @@ Label each system as **Rule-based AI**, **Classical ML**, or **Deep Learning**. 
 |---|--------|------|-------|
 | 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-based AI | Use humance define rule |
 | 2 | A spam filter trained on 10 million labeled emails using random forest | Classic ML | Trained on data |
-| 3 | GPT-4 generating text responses | Deep Learning | Nueral Network |
+| 3 | GPT-4 generating text responses | Deep Learning | Neural Network |
 | 4 | Netflix's collaborative filtering recommendation engine | Classic ML | Learnt from user data |
 | 5 | A thermostat that adjusts temperature based on time-of-day rules | Rule-based | Fixed rule |
-| 6 | A CNN that detects tumors in medical images | Deep Learning | ? |
-| 7 | A decision tree that approves/rejects credit card applications based on features | Classic ML | ? |
+| 6 | A CNN that detects tumors in medical images | Deep Learning | Neural Network for image |
+| 7 | A decision tree that approves/rejects credit card applications based on features | Classic ML | Trained model |
