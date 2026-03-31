@@ -23,6 +23,7 @@
 
 
 ### Answer exercise C : AI vs ML vs Deep Learning Sorting
+Label each system as **Rule-based AI**, **Classical ML**, or **Deep Learning**. Write one sentence justifying your choice.
 | # | System | Type | Reason|
 |---|--------|------|-------|
 | 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-based AI | Use humance define rule |
