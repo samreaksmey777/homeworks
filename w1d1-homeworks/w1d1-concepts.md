@@ -1,4 +1,4 @@
-## Answer exercise A : Classify Real-World ML Problems
+### Answer exercise A : Classify Real-World ML Problems
 | Scenario | Problem Type | Input Features | Output |
 |----------|--------------|----------------|--------|
 | Preditct whether a loan application will detault | Classification | Credit Scoring, Income, Employment Status | Default / Not Detault) |
@@ -9,7 +9,7 @@
 | Predict the severity (1-5) of a patient's condition | Classification (ordinal) | Symptoms, vital signs, lab results | Severity category(1-5) |
 
 ------
-## Answser exercise B : Map the ML Lifecycle
+### Answser exercise B : Map the ML Lifecycle
 **Scenario:** A hospital wants to predict which patients admintted to the ER are at high risk of readmission within 30 days.
 ```
 1. Problem Definition : Predict if an ER patient will return within 30 days. It is a binary classification problem (high risk or low risk). The goal is to reduce readmissions.
@@ -22,4 +22,4 @@
 ```
 
 
-## Answer exercise C : AI vs ML vs Deep Learning Sorting
+### Answer exercise C : AI vs ML vs Deep Learning Sorting
