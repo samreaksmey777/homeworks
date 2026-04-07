@@ -1,24 +1,35 @@
-# Answer exercise A : Classify Real-World ML Problems
+### Answer exercise A : Classify Real-World ML Problems
 | Scenario | Problem Type | Input Features | Output |
 |----------|--------------|----------------|--------|
-| Preditct whether a loan application will detault | Classification | Credit score, income, debt-to-income ratio, Employment hstory | Binary label(default / no detault) |
-| Forecast next month's energy consumption for a city | Regressio | Historical energy usage, weather data, population/activity trens | Numeric value (predicted energy consumption) |
+| Preditct whether a loan application will detault | Classification | Credit Scoring, Income, Employment Status | Default / Not Detault) |
+| Forecast next month's energy consumption for a city | Regressio | Historical energy usage, weather data, population/activity trens | Numeric value|
 | Group customers by purchasing behavior | Clustering | Purchase history,frequency of purchases,average spend | Customer segments/groups|
-| Detect fraudulent credit card transactions | Classification | Transaction amount,location,time, past behavior patterns | Binary label (fraud/not fraud) |
-| Generate product descriptions from an image | Generative | Image pixels/features, detected objects, visual attributes | Text desctiption of the product |
+| Detect fraudulent credit card transactions | Classification | Transaction amount,location,time | Fraud/Not Fraud) |
+| Generate product descriptions from an image | Generative | Image (pixels/features) | Text desctiption of the product |
 | Predict the severity (1-5) of a patient's condition | Classification (ordinal) | Symptoms, vital signs, lab results | Severity category(1-5) |
 
 ------
-# Answser exercise B : Map the ML Lifecycle
+### Answser exercise B : Map the ML Lifecycle
 **Scenario:** A hospital wants to predict which patients admintted to the ER are at high risk of readmission within 30 days.
 ```
-1. Problem Definition : The goal is to predict wether patient addminted to the ER will be readmitted within 30days of discharge.
-  The end user are case managers and nurses who will use a risk scores to trigger early intervention.
-  "Good enough" means catching a meaningful proportion of high-risk patients without overwhelming staff with false alarms.
-2. Data Collection :
-3. EDA & Preprocessing :
-4. Model training : 
+1. Problem Definition _ : Predict if an ER patient will return within 30 days. It is a binary classification problem (high risk or low risk). The goal is to reduce readmissions.
+2. Data Collection ____ : Collect patient data like age, history, diagnosis, and past visits. Include lab results and treatments. Use past data with known outcomes.
+3. EDA & Preprocessing _: Check the data for patterns and missing values. Clean the data and convert categories into numbers. Remove unnecessary features.
+4. Model training _____ : Train a model using the data (e.g., logistic regression). Split data into training and testing sets. The model learns to predict risk.
+5. Evaluation _________ : Measure performance using accuracy, precision, and recall. Focus on correctly identifying high-risk patients. Make sure the model works well on new data.
+6. Deployment _________ : Use the model in the hospital system. It predicts risk when a patient arrives. Doctors can use it to make decisions.
+7. Monitoring _________ : Track model performance over time. Check if accuracy drops. Retrain the model if needed.
 ```
 
 
-# Answer exercise C : AI vs ML vs Deep Learning Sorting
+### Answer exercise C : AI vs ML vs Deep Learning Sorting
+Label each system as **Rule-based AI**, **Classical ML**, or **Deep Learning**. Write one sentence justifying your choice.
+| # | System | Type | Reason|
+|---|--------|------|-------|
+| 1 | A chess engine that evaluates positions using a hand-crafted evaluation function | Rule-based AI | Use humance define rule |
+| 2 | A spam filter trained on 10 million labeled emails using random forest | Classic ML | Trained on data |
+| 3 | GPT-4 generating text responses | Deep Learning | Neural Network |
+| 4 | Netflix's collaborative filtering recommendation engine | Classic ML | Learnt from user data |
+| 5 | A thermostat that adjusts temperature based on time-of-day rules | Rule-based | Fixed rule |
+| 6 | A CNN that detects tumors in medical images | Deep Learning | Neural Network for image |
+| 7 | A decision tree that approves/rejects credit card applications based on features | Classic ML | Trained model |
