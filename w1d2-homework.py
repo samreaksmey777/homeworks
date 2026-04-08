@@ -101,6 +101,28 @@ print(cm)
 
 print("# Digit 9 has the lowest precision because it is sometimes misclassified as digits like 4 and 5.")
 
+# Plot and save the confusion matrix
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 8))
+plt.imshow(cm, cmap='Blues', aspect='auto')
+plt.colorbar(label='Count')
+plt.title('Confusion Matrix - K-Neighbors Classifier on Digits Dataset')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.xticks(range(10))
+plt.yticks(range(10))
+
+# Add text annotations
+for i in range(cm.shape[0]):
+    for j in range(cm.shape[1]):
+        plt.text(j, i, str(cm[i, j]), ha='center', va='center', color='black', fontsize=9)
+
+plt.tight_layout()
+plt.savefig('confusion_matrix.png', dpi=300, bbox_inches='tight')
+print("Image saved as 'confusion_matrix.png'")
+plt.show()
+
 print("3. === Unsupervised Clustering Task ===")
 
 print("# 1. Use same dataset but DROP labels")
@@ -154,6 +176,10 @@ for i, sample in enumerate(samples):
     plt.imshow(sample.reshape(8, 8), cmap='gray')
     plt.axis('off')
 
+plt.suptitle(f'5 Random Samples from Largest Cluster {largest_cluster}')
+plt.tight_layout()
+plt.savefig('cluster_samples.png', dpi=300, bbox_inches='tight')
+print("Image saved as 'cluster_samples.png'")
 plt.show()
 
 print("4. === Comparison Analysis (Comments) ===")
