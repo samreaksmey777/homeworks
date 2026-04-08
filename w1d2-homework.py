@@ -39,14 +39,14 @@ params = [
     (False, "compress_data")
 ]
 
-print("#1. === Paradigm Decision ===")
+print("1. === Paradigm Decision ===")
 for has_labels, goal in params:
     result = choose_paradigm(has_labels, goal)
     print(f"has_labels: {has_labels}, goal: '{goal}' => Result: {result}")
 
-print("\n#2. === Load and Explore Digits Dataset ===")
+print("2. === Supervised Classification Task ===")
 
-# 1. Load the digits dataset
+print("# 1. Load the digits dataset")
 digits = load_digits()
 print(f"Data shape: {digits.data.shape}")
 print(f"Target shape: {digits.target.shape}") # it means that we have 1797 samples and each label has 64 features (8x8 pixel values) and the target is the digit label (0-9) for each sample.
@@ -55,7 +55,7 @@ print(f"Target shape: {digits.target.shape}") # it means that we have 1797 sampl
 X = digits.data # Features (pixel values)
 y = digits.target # Target labels (digits 0-9)
 
-# 2. Split the dataset into training and testing sets
+print("# 2. Split the dataset into training and testing sets")
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -64,20 +64,20 @@ X_train, X_test, y_train, y_test = train_test_split(
                                     random_state=42 # Fix randomness for reproducibility
 )
 
-#3. Scale the features
+print("# 3. Scale the features")
 from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-#4. Train a simple model (e.g., Logistic Regression)
+print("# 4. Train a simple model (e.g., Logistic Regression)")
 from sklearn.neighbors import KNeighborsClassifier
 
 model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X_train, y_train)
 
-#5. Evaluate the model
+print("# 5. Evaluate the model")
 from sklearn.metrics import accuracy_score, classification_report
 
 y_pred = model.predict(X_test)
@@ -85,7 +85,7 @@ y_pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
-#6. Visualize some predictions
+print("# 6. Visualize some predictions")
 import numpy as np
 
 report = classification_report(y_test, y_pred, output_dict=True)
@@ -98,3 +98,70 @@ from sklearn.metrics import confusion_matrix
 
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
+
+print("# Digit 9 has the lowest precision because it is sometimes misclassified as digits like 4 and 5.")
+
+print("3. === Unsupervised Clustering Task ===")
+
+print("# 1. Use same dataset but DROP labels")
+
+from sklearn.datasets import load_digits
+
+digits = load_digits()
+X = digits.data # Use only features (pixel values)
+print("*** Dataset loaded without labels completed ***")
+
+print("# 2. Apply K-Means clustering")
+
+from sklearn.cluster import KMeans
+
+kmeans = KMeans(n_clusters=10, random_state=42)
+kmeans.fit(X)
+print("*** K-Means model training completed ***")
+
+print("# 3. Get cluster labels")
+cluster_labels = kmeans.labels_
+print(cluster_labels)
+print("*** Cluster labels obtained ***")
+
+print("# 4. Cluster size distribution")
+
+import numpy as np
+
+for i in range(10):
+    cluster_size = np.sum(cluster_labels == i)
+    print(f"Cluster {i}: {cluster_size} samples")
+print("*** Cluster size distribution calculated ***")
+
+print("# 5. Find largest cluster")
+
+largest_cluster = np.argmax([np.sum(cluster_labels == i) for i in range(10)])
+print(f"Largest cluster: Cluster {largest_cluster}")
+print("*** Largest cluster identified ***")
+
+print("# 5. Visualize 5 random samples from the largest cluster")
+
+import matplotlib.pyplot as plt
+
+# Get indices of largest cluster
+indices = np.where(cluster_labels == largest_cluster)[0]
+
+# Pick first 5 samples
+samples = X[indices[:5]]
+
+for i, sample in enumerate(samples):
+    plt.subplot(1, 5, i+1)
+    plt.imshow(sample.reshape(8, 8), cmap='gray')
+    plt.axis('off')
+
+plt.show()
+
+print("4. === Comparison Analysis (Comments) ===")
+print("KMean clusters do not perfectly match the digit classes because it is an unsupervised method.")
+print("It groups data based on similarity rather than true labels.")
+
+print("Supervised classification uses true labels to learn patterns, while unsupervised clustering finds inherent groupings without labels.")
+print("It can predict exact classes and provided clear accuracy metrics.")
+
+print("Clustering do not required labels and can discover hidden patterns data.")
+print("It can be useful for exploratory data analysis but may not align with true classes.")
